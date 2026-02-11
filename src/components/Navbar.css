@@ -6,6 +6,8 @@
   z-index: 1000;
   padding: 15px 0;
   transition: all 0.3s ease;
+  background: linear-gradient(to bottom, rgba(240, 248, 164, 0.78), rgba(240, 248, 164, 0.2));
+  backdrop-filter: blur(8px);
 }
 
 .navbar.scrolled {
@@ -103,6 +105,7 @@
 .nav-link:hover,
 .nav-link.active {
   color: var(--secondary);
+  text-shadow: 0 5px 20px rgba(54, 101, 107, 0.22);
 }
 
 .nav-actions {
@@ -132,8 +135,9 @@
 
 .cart-btn {
   position: relative;
-  background: transparent;
-  border: none;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
   cursor: pointer;
   padding: 8px;
   transition: transform 0.3s ease;

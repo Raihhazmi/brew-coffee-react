@@ -9,7 +9,7 @@ function CoffeeCupModel() {
   const meshRef = useRef()
 
   // Auto-rotate the model
-  useFrame((state) => {
+  useFrame(() => {
     if (meshRef.current) {
       meshRef.current.rotation.y += 0.005
     }
@@ -55,6 +55,8 @@ const Hero = () => {
       <div className="hero-bg">
         <div className="bg-gradient"></div>
         <div className="coffee-beans-pattern"></div>
+        <div className="hero-orb orb-one"></div>
+        <div className="hero-orb orb-two"></div>
       </div>
 
       {/* Floating Interactive Icons */}
@@ -107,15 +109,21 @@ const Hero = () => {
           </p>
 
           <div className="hero-cta fade-in-up">
-            <button className="btn-primary">
+            <a href="#menu" className="btn-primary">
               <span>Explore Menu</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
-            </button>
-            <button className="btn-secondary">
+            </a>
+            <a href="#story" className="btn-secondary">
               <span>Our Story</span>
-            </button>
+            </a>
+          </div>
+
+          <div className="hero-highlights fade-in-up">
+            <span className="highlight-pill">⚡ Fresh roasted daily</span>
+            <span className="highlight-pill">📶 Fast Wi-Fi for WFC</span>
+            <span className="highlight-pill">🌙 Open until 23.30</span>
           </div>
 
           <div className="hero-stats">
